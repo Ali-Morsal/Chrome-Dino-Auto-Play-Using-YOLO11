@@ -1,0 +1,8 @@
+opencv-python==4.11.0.86
+numpy==1.26.4
+mss==10.1.0
+pyautogui==0.9.54
+ultralytics==8.3.204
+Pillow==11.3.0
+PyYAML==6.0.2
+matplotlib==3.10.5
