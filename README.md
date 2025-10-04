@@ -1,4 +1,4 @@
-# Dino Game Auto-Player using YOLO
+# Dino Game Auto-Player using YOLO11
 
 This project implements an AI-powered auto-player for the classic Chrome Dino game (accessible at `chrome://dino`). It uses the YOLO11n object detection model to detect the dinosaur, caktus, and pterodactyls in real-time from screen captures. Based on detections, the script automates jumping (over cacti or low-flying pterodactyls) and ducking (under high-flying pterodactyls). The game speed is adaptively handled by increasing the detection threshold over time.
 
