@@ -56,11 +56,6 @@ def list_images(folder, exts=("png", "jpg", "jpeg")):
 
 
 def load_image_pil(path, night=False, _cache={}):
-    """
-    بارگذاری تصویر به صورت RGBA. اگر night=True باشه، RGB نگاتیو میشه ولی کانال آلفا حفظ میشه.
-    از کش ساده برای جلوگیری از پردازش تکراری استفاده می‌کنیم.
-    برمی‌گرداند: PIL.Image (mode='RGBA')
-    """
     key = (str(path), bool(night))
     if key in _cache:
         # return a copy to avoid accidental mutation
@@ -68,7 +63,6 @@ def load_image_pil(path, night=False, _cache={}):
 
     im = Image.open(path).convert("RGBA")
     if night:
-        # نگاتیو کردن RGB و حفظ آلفا
         r, g, b, a = im.split()
         rgb = Image.merge("RGB", (r, g, b))
         inv = ImageOps.invert(rgb)
